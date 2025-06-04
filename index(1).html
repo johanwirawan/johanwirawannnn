@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>johan-media</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .profile-img {
+      width: 180px;
+      border-radius: 50%;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-links a {
+      font-size: 36px;
+      margin: 15px;
+      text-decoration: none;
+      color: #444;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #0077ff;
+    }
+
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mau Tau Johan Lainnya?</h1>
+
+  <!-- Gambar Profil -->
+  <img src="https://raw.githubusercontent.com/johanwirawan/johanwirawan/main/giphy.gif
+" alt="Foto Profil" class="profile-img" />
+
+  <!-- Link Sosial Media -->
+  <div class="social-links">
+    <a href="https://www.instagram.com/johanwiirawan?igsh=MXdpcGZjdDBoZzJmMQ==" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100063590605419" target="_blank" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://wa.me/628151851990" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://t.me/oraapaapa" target="_blank" title="Telegram">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </div>
+
+  <!-- Musik Latar -->
+  <audio id="bg-music" loop>
+    <source src="https://raw.githubusercontent.com/johanwirawan/johanwirawan/main/musik-latar%20(1).mp3
+" type="audio/mpeg" />
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+
+  <script>
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.play().catch(e => console.log("Autoplay gagal:", e));
+      }
+    }, { once: true });
+  </script>
+
+</body>
+</html>
